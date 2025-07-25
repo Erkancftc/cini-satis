@@ -1,15 +1,9 @@
 {
-  "name": "cini-website",
+  "name": "cini-root",
   "version": "1.0.0",
-  "description": "Çini web sitesi backend destekli",
-  "main": "server.js",
+  "description": "Çini projesi kök dizini",
   "scripts": {
-  "start": "node server.js",
-  "build": "echo \"No build step needed\""
+    "heroku-postbuild": "cd server && npm install"
   },
-  "author": "kaan",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^5.1.0"
-  }
+  "license": "MIT"
 }

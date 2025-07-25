@@ -1,16 +1,15 @@
 {
-  "name": "cini-satis",
+  "name": "cini-backend",
   "version": "1.0.0",
-  "description": "Çini web sitesi",
-  "main": "server/back-end/dist/index.js",
+  "description": "Çini web sitesi backend API",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/back-end/dist/index.js",
-    "heroku-postbuild": "cd server/back-end && npm install && npm run build"
+    "start": "node server.js",
+    "build": "echo \"No build step needed\""
   },
-  "engines": {
-    "node": "18.x"
-  },
+  "author": "Kaan",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^5.1.0"
   }
 }
