@@ -1,15 +1,11 @@
 {
-  "name": "cini-backend",
+  "name": "cini-backend-module",
   "version": "1.0.0",
-  "description": "Çini web sitesi backend API",
-  "main": "server.js",
+  "description": "Çini API içindeki alt modül veya servis",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "echo \"No build step needed\""
+    "start": "node index.js"
   },
-  "author": "Kaan",
   "license": "MIT",
-  "dependencies": {
-    "express": "^5.1.0"
-  }
+  "dependencies": {}
 }

@@ -1,7 +1,8 @@
 {
   "name": "cini-root",
   "version": "1.0.0",
-  "description": "Çini projesi kök dizini",
+  "private": true,
+  "description": "Çini web sitesi ana dizini",
   "scripts": {
     "heroku-postbuild": "cd server && npm install"
   },
