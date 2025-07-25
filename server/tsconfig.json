@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+
+    // Aşağıdakiler TypeORM + üretim derlemesi için kritik:
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "back-end/dist/index.js"]
+}
