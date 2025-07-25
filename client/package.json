@@ -1,7 +1,15 @@
 {
+  "name": "cini-website",
+  "version": "1.0.0",
+  "description": "Çini web sitesi backend destekli",
+  "main": "server.js",
   "scripts": {
-    "start": "node server/dist/index.js",
-    "start:heroku": "npm run heroku-postbuild && npm run start",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
