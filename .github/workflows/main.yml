@@ -8,12 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
 
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: cini-satis
-          heroku_email: erkancftc@gmail.com
+          heroku_app_name: "cini-satis" # Heroku'daki app ismin
+          heroku_email: "erkancftc@gmail.com"
