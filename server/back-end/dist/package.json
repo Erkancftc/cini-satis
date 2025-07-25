@@ -4,7 +4,7 @@
   "description": "Çini web sitesi ana API sunucusu",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node index.js",
     "build": "echo \"No build step needed\""
   },
   "author": "Kaan",
