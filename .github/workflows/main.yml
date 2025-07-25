@@ -11,10 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.12.12
+      - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: "cini-satis"
-          heroku_email: "seninmailin@example.com"
+          heroku_app_name: "cini-satis"  # Bu Heroku’daki gerçek app adı
+          heroku_email: "erkancftc@gmail.com"  # Heroku hesabınla aynı e-posta
