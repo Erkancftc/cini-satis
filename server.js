@@ -4,22 +4,15 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Body parser middleware (JSON post istekleri için)
-app.use(express.json());
-
-// Statik dosyaları "public" klasöründen sun
+// Statik dosyaları sun (public klasörünü kullanıyorsan)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Basit backend testi
+// Basit API route
 app.get('/api/selam', (req, res) => {
   res.json({ mesaj: 'Sunucu çalışıyor 🚀' });
 });
 
-// Product route'u ekle (doğru path'e göre güncelledik)
-const productRoutes = require('./server/back-end/dist/routes/productRoutes');
-app.use('/products', productRoutes);
-
-// Tüm diğer istekleri frontend'e yönlendir (SPA için)
+// Fallback route (SPA için index.html sunar)
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
