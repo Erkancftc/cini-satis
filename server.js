@@ -4,20 +4,22 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Public klasöründen statik dosyaları sun
+// JSON gövde verilerini parse et
+app.use(express.json());
+
+// 📦 Route'ları ekle
+const productRoutes = require('./server/back-end/dist/routes/productRoutes');
+app.use('/api/products', productRoutes);
+
+// 🌐 Public klasörü sun
 app.use(express.static(path.join(__dirname, 'client', 'public')));
 
-// API örnek endpoint
-app.get('/api/selam', (req, res) => {
-  res.json({ mesaj: 'Sunucu çalışıyor 🚀' });
-});
-
-// Fallback - SPA için
+// 🔁 SPA fallback route
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'public', 'index.html'));
 });
 
-// Sunucuyu başlat
+// 🚀 Sunucuyu başlat
 app.listen(PORT, () => {
   console.log(`🚀 Sunucu ${PORT} portunda çalışıyor`);
 });
