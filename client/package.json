@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Çini web sitesi backend destekli",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
+ "scripts": {
+  "start": "node dist/server.js",
+  "build": "tsc"
   },
   "engines": {
     "node": "18.x"
