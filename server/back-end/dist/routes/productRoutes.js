@@ -1,9 +1,10 @@
-const express = require('express');
+const express = require("express");
+const controller = require("../controllers/productController");
+
 const router = express.Router();
 
-const controller = require('../controllers/productController');
+// Route tanımları
+router.get("/", controller.getAll);   // Tüm ürünleri getir
+router.post("/", controller.create); // Yeni ürün oluştur
 
-router.get('/', controller.getAll);
-router.post('/', controller.create);
-
-module.exports = router;
+module.exports = router; // ← burası düzeltilmeli
